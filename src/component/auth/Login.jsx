@@ -76,10 +76,10 @@ const Login = () => {
           </button>
         </div>
 
-        <div className="flex justify-start space-x-4 mb-6 mt-4">
-          <img src={Apple} alt="Apple img" className="h-10 md:h-12" />
-          <img src={Facebook} alt="Facebook img" className="h-10 md:h-12" />
-          <img src={Google} alt="Google img" className="h-10 md:h-12" />
+        <div className="flex justify-start space-x-4 mb-6  ">
+          <img src={Apple} alt="Apple img" className="h-10  " />
+          <img src={Facebook} alt="Facebook img" className="h-10  " />
+          <img src={Google} alt="Google img" className="h-10  " />
         </div>
         <p className="text-start text-gray-400 text-xs mb-8">
           or login with email
