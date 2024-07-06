@@ -11,13 +11,13 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="flex  gap-20 items-center h-screen w-screen bg-gray-100 mt-0  snap-mandatory snap-x ">
+    <div className="flex  gap-20 items-center h-screen w-screen bg-gray-100 mt-0  snap-mandatory snap-x sm: ">
       <div className=" h-screen">
         <Sidebar />
       </div>
 
       <div className="flex flex-col gap-2 h-screen   w-full  ">
-        <div className="flex flex-col gap-2  mb-1  w-11/12">
+        <div className="flex flex-col gap-2  mb-1  w-11/12 sm:">
           <div className="relative flex justify-between mt-2 mb-1  ">
             <h1 className="text-base font-bold flex "> Hello, Evano👋🏼,</h1>
             <div className="relativ">
