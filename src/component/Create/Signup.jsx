@@ -38,7 +38,7 @@ const Signup = () => {
 
   return (
     <div className="flex justify-center items-center h-screen w-screen bg-gray-100 overflow-hidden ">
-      <div className=" absolute   bg-white p-6 rounded-lg shadow-md w-full max-w-sm max-h-130">
+      <div className=" absolute   bg-white p-6 rounded-lg shadow-md w-full max-w-sm max-h-130 ">
         <div className="flex justify-start mb-8 gap-x-2.5 mt-2 ">
           <button className="text-gray-950 border-b-2 border-pink-600   pb-2">
             Register
