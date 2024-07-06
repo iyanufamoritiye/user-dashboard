@@ -33,7 +33,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen pt-2 ${isSidebarExpanded ? 'w-64' : 'w-16'} bg-white p-6 md:w-16 transition-all duration-300`} ">
+    <div className="flex flex-col h-screen pt-2 ${isSidebarExpanded ? 'w-64' : 'w-16'} bg-white p-6 md:w-64transition-all duration-300`} ">
       <div className="mb-6 flex gap-2 cursor-pointer" onClick={toggleSidebar}>
         <RiSettingsLine className="h-8 w-8 text-2xl" />
         {isSidebarExpanded && (
