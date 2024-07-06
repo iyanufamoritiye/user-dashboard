@@ -140,7 +140,7 @@ const Login = () => {
             {formik.isSubmitting ? "Loading..." : " Login to Dashboard "}
           </button>
         </form>
-        <div className="flex items-center mt-4 mb-4">
+        <div className="flex items-center mt-4 mb-6">
           <input
             type="checkbox"
             name="rememberMe"
