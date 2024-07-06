@@ -115,7 +115,7 @@ const Signup = () => {
           <input type="checkbox" className="mr-2 bg-red-400" />
           <label>Send me news and promotions</label>
         </div>
-        <p className="text-center text-gray-500 text-xs mt-4">
+        <p className="text-center text-gray-500 text-xs mt-2">
           By continuing I agree with the{" "}
           <a href="#" className="text-blue-500">
             Terms & Conditions
