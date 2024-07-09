@@ -234,10 +234,15 @@ const Dashboard = () => {
       >
         <div className="flex   flex-col gap-2    w-11/12   ">
           <div className="relative flex justify-between mt-2 mb-1  ">
-            <RiSettingsLine
-              className="h-8 w-8 text-2xl xs:h-6   xs:w-6   "
-              onClick={toggleSidebar}
-            />
+            {isOpen && (
+              <button
+                onClick={handleLogout}
+                className="border  00 font-bold text-xs text-white   bg-purple-600 rounded-lg py-1 px-2 absolute top-5 right-0 "
+              >
+                {" "}
+                Logout
+              </button>
+            )}
             <h1 className="text-base font-bold flex xs:text-sm xs:ml-12 ">
               {" "}
               Hello, Evano👋🏼,
