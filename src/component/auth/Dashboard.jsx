@@ -68,51 +68,26 @@ const Dashboard = () => {
     setIsOpen(!isOpen);
   };
 
-  const DivContainer = styled.div`
-    @media (min-width: 200px) &&(max-width:768px) {
-      widt: 100%;
-    }
-
-    @media (min-width: 769px) &&(max-width:1026px) {
-    }
-  `;
-
-  const Divsidebar = styled.div`
-    @media (min-width: 200px) &&(max-width:768px) {
-      height: 50px;
-
-      justify-content: center;
-      align-items: center;
-    }
-
-    @media (min-width: 769px) &&(max-width:1026px) {
-    }
-  `;
-  const Divmain = styled.div`
-    @media (min-width: 769px) &&(max-width:1026px) {
-    }
-  `;
-
   return (
-    <DivContainer className=" flex w-screen  gap-20 sm:gap-6 md:gap-6 xs:gap-4  items-center h-svh   bg-gray-100 mt-0 md:gap-6  ">
+    <div className=" flex w-screen  gap-20 sm:gap-6 md:gap-6 xs:gap-4  items-center h-svh   bg-gray-100 mt-0 md:gap-6  ">
       {/* //side bard */}
 
-      <Divsidebar
+      <div
         className={`  flex flex-col h-full 
           max-h-dvh pt-2 bg-white p-6 transition-all duration-300   ${
             isSidebarExpanded ? " 40" : " 16"
-          }   lg:max-w-48   md:z-40 md:max-w-48
-          xs:hidden`}
+          }   lg:max-w-48   md:z-40 md:max-w-48 xs:hidden 
+           `}
       >
         <div className="mb-6 flex gap-2 cursor-pointer    ">
           <RiSettingsLine
-            className="h-8 w-8 text-2xl   "
+            className="h-8 w-8 text-2xl xs:h-6 xs:w-6 xs:mt-6   "
             onClick={toggleSidebar}
           />
           {isSidebarExpanded && (
             <h1 className="text-xl font-bold    ">
-              Dashboard{" "}
-              <span className="text-xs font-light md:hidden">v.01</span>
+              Dashboard
+              <span className="text-xs font-light md:hidden  ">v.01</span>
             </h1>
           )}
         </div>
@@ -124,7 +99,7 @@ const Dashboard = () => {
             >
               <img
                 src={Dashboardicon}
-                className="h-6 w-6 text-gray-400 focus:stroke-black sm:hidden "
+                className="h-6 w-6 text-gray-400 focus:stroke-black sm:hidden xs:h-6 xs:w-6 "
                 alt=""
               />
               {isSidebarExpanded && <span className="ml-4">Dashboard</span>}
@@ -138,7 +113,7 @@ const Dashboard = () => {
             >
               <img
                 src={Productionicon}
-                className="h-6 w-6  focus:stroke-black "
+                className="h-6 w-6  focus:stroke-black xs:h-6 xs:w-6 "
                 alt=""
               />
               {isSidebarExpanded && <span className="ml-4">Product</span>}
@@ -150,7 +125,7 @@ const Dashboard = () => {
               to="#"
               className="flex items-center  relative  text-xs focus:bg-purple-600 focus:text-white rounded-md p-2"
             >
-              <TbUserSquareRounded className="h-6 w-6 text-gray-400 focus:text-white  " />
+              <TbUserSquareRounded className="h-6 w-6 text-gray-400 focus:text-white   xs:h-6 xs:w-6 " />
               {isSidebarExpanded && <span className="ml-4">Customers</span>}
               {isSidebarExpanded && (
                 <FaChevronRight className="absolute right-4 text-gray-400 focus:text-white hover:text-white" />
@@ -162,7 +137,7 @@ const Dashboard = () => {
             >
               <img
                 src={Incomeicon}
-                className="h-6 w-6 text-gray-400 focus:stroke-white "
+                className="h-6 w-6 text-gray-400 focus:stroke-white xs:h-6 xs:w-6 "
                 alt=""
               />
               {isSidebarExpanded && <span className="ml-4">Income</span>}
@@ -176,7 +151,7 @@ const Dashboard = () => {
             >
               <img
                 src={Promoteicon}
-                className="h-6 w-6 text-gray-400 focus:stroke-black "
+                className="h-6 w-6 text-gray-400 focus:stroke-black xs:h-6 xs:w-6 "
                 alt=""
               />
               {isSidebarExpanded && <span className="ml-4">Promote</span>}
@@ -189,7 +164,11 @@ const Dashboard = () => {
               className="flex relative items-center   text-xs focus:bg-purple-600 focus:text-white text-gray-600 rounded-md p-2"
             >
               <div className="h-6 w-6 text-gray-400  focus:brightness-0 focus:invert  ">
-                <img src={Helpicon} alt="" />
+                <img
+                  src={Helpicon}
+                  alt=""
+                  className="h-6 w-6 text-gray-400 focus:stroke-black xs:h-6 xs:w-6 "
+                />
               </div>
               {isSidebarExpanded && <span className="ml-4">Help</span>}
               {isSidebarExpanded && (
@@ -243,19 +222,22 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-      </Divsidebar>
+      </div>
       {/* //header */}
 
-      <Divmain
+      <div
         className={`   md:ml-auto  md:w-11/12 flex flex-col gap-2 md:max-h-full  z-30   
            w-full h-screen md:fixed  md:top-10 md:-right-10 md:z-1
-            sm:fixed sm:top-4 sm:-right-10
+            xs:fixed xs:top-6 xs:-right-5
            
            `}
       >
         <div className="flex   flex-col gap-2    w-11/12   ">
           <div className="relative flex justify-between mt-2 mb-1  ">
-            <h1 className="text-base font-bold flex "> Hello, Evano👋🏼,</h1>
+            <h1 className="text-base font-bold flex xs:text-sm xs:ml-12 ">
+              {" "}
+              Hello, Evano👋🏼,
+            </h1>
             <div className="relative">
               <input
                 type="text"
@@ -271,24 +253,28 @@ const Dashboard = () => {
           {/* //card*/}
           <div
             className="flex   justify-between items-center bg-white rounded-lg shadow   w-full md md:h-[85px] xs:flex-col  
-          xs:bg-transparent xs:border-0"
+          xs:bg-transparent xs:border-0 XS:justify-between xs:shadow-none  "
           >
             <div
               className="flex items-center justify-center w-full border-r-2  
-                  py-4 md:py-0  xs:border "
+                  py-4 md:py-0  xs:border xs:bg-white xs:w-56 xs:rounded-lg xs:p-1 xs:mb-2"
             >
               <div className="bg-green-100 p-4    rounded-full  ">
                 <HiOutlineUsers className="h-6 w-6 text-green-600  " />
               </div>
               <div className="ml-2 text-start">
-                <p className="text-gray-400 text-xs ">Total Customers</p>
-                <p className="text-lg    font-bold  ">5,423</p>
-                <p className="text-green-500 text-xs">▲ 16% this month</p>
+                <p className="text-gray-400 text-xs xs:text-[8px] ">
+                  Total Customers
+                </p>
+                <p className="text-lg    font-bold xs-text-sm ">5,423</p>
+                <p className="text-green-500 text-xs xs:text-[8px]">
+                  ▲ 16% this month
+                </p>
               </div>
             </div>
             <div
               className="flex items-center justify-center w-full border-r-2  
-                  py-4 md:py-0 xs:border xs:bg-white xs:w-56 xs:rounded-lg  "
+                  py-4 md:py-0 xs:border xs:bg-white xs:w-56 xs:rounded-lg xs:p-1 xs:mb-2 "
             >
               <div className="bg-green-100 p-4 xs:p-1 rounded-full">
                 <GrUserExpert className="h-6 w-6 text-green-600 xs:h-4 xs:w-4" />
@@ -303,14 +289,16 @@ const Dashboard = () => {
             </div>
             <div
               className="flex items-center justify-center w-full border-r-2  
-                  py-4 md:py-0 xs:border xs:w-48"
+                  py-4 md:py-0 xs:border xs:bg-white xs:w-56 xs:rounded-lg xs:p-1 xs:mb-2"
             >
               <div className="bg-green-100 p-4 rounded-full">
                 <HiOutlineComputerDesktop className="h-6 w-6 text-green-600" />
               </div>
               <div className="ml-2 text-start">
-                <p className="text-gray-400 text-xs">Active Now</p>
-                <p className="text-lg font-bold">189</p>
+                <p className="text-gray-400 text-xs  xs:text-[8px]">
+                  Active Now
+                </p>
+                <p className="text-lg font-bold xs-text-sm">189</p>
                 <div className=" flex">
                   <img src={Ellipse0} alt="usersimage" className=" -mr-3  " />
                   <img src={Ellipse1} alt="usersimage" className=" -mr-3" />
@@ -326,8 +314,8 @@ const Dashboard = () => {
         <div className=" h-full w-full   ">
           <CustomerList />
         </div>
-      </Divmain>
-    </DivContainer>
+      </div>
+    </div>
   );
 };
 

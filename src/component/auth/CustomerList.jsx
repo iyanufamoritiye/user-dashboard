@@ -110,8 +110,8 @@ const CustomerList = () => {
     );
 
   return (
-    <div className=" relative bg-white        py-2 px-6 rounded-lg shadow-md w-11/12     md:h-[550px]   lg:h-[550px]   ">
-      <div className="flex justify-between">
+    <div className=" relative bg-white        py-2 px-6 rounded-lg shadow-md w-11/12     md:h-[550px]   lg:h-[550px ] xs:max-width-36  xs:h-[550px ]  ">
+      <div className="flex justify-between xs:flex-col">
         <div>
           <h2 className="  font-bold mb-1 text-base md:text-sm">
             All Customers
@@ -127,7 +127,8 @@ const CustomerList = () => {
               placeholder="Search"
               value={search}
               onChange={handleSearchChange}
-              className="flex-grow py-2 pl-8 pr-3 text-xs text-gray-600  bg-gray-50  border w-40 border-0 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+              className="flex-grow py-2 pl-8 pr-3 text-xs text-gray-600  bg-gray-50  border w-40 border-0 rounded-md 
+              shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             />
             <IoSearch className="absolute text-sm left-3  top-2.5 text-gray-400  " />
           </div>
@@ -147,8 +148,8 @@ const CustomerList = () => {
           </div>
         </div>
       </div>
-      <div className="  h-96 ">
-        <table className="min-w-full bg-white  ">
+      <div className="  h-96     xs:overflow-auto ">
+        <table className="min-w-full bg-white  xs:snap-mandatory">
           <thead className="text-xs text-gray-300 text-start  font-medium p-0  ">
             <tr>
               <th className="text-start  py-2 pl-0 pr-4  border-b">
@@ -158,8 +159,8 @@ const CustomerList = () => {
               <th className=" text-start      py-2 px-4 border-b">
                 Phone Number
               </th>
-              <th className="text-start   py-2 px-4 border-b">Email</th>
-              <th className="text-start   py-2 px-4 border-b">Country</th>
+              <th className="text-start     py-2 px-4 border-b">Email</th>
+              <th className="text-start      py-2 px-4 border-b">Country</th>
               <th className="text-center   py-2  pl-4 pr-0  border-b">
                 Status
               </th>
@@ -171,9 +172,9 @@ const CustomerList = () => {
               <tr key={index}>
                 <td className="py-2 pl-0 pr-4  border-b">{customer.name}</td>
                 <td className="py-2 px-4 border-b">{customer.company}</td>
-                <td className="py-2 px-4 border-b">{customer.phone}</td>
-                <td className="py-2 px-4 border-b">{customer.email}</td>
-                <td className="py-2 px-4 border-b">{customer.country}</td>
+                <td className="py-2 px-4  border-b">{customer.phone}</td>
+                <td className="py-2 px-4   border-b">{customer.email}</td>
+                <td className="py-2 px-4   border-b">{customer.country}</td>
                 <td className="py-2  pl-2 pr-0 border-b text-end ">
                   <span
                     className={`inline-flex items-center border-2 px-3 py-0.5  rounded-md text-sm text-center   font-medium ${
@@ -190,7 +191,7 @@ const CustomerList = () => {
           </tbody>
         </table>
       </div>
-      <div className="flex justify-between items-center mt-6  lg:mt-16 md:mt-16 ">
+      <div className="flex justify-between items-center mt-6  lg:mt-16 md:mt-16   ">
         <div className="text-sm   text-gray-400">
           Showing data 1 to 8 of 256K entries
         </div>
