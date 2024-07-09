@@ -134,7 +134,7 @@ const CustomerList = () => {
           </div>
 
           <div className="relative mr-4 w-32  ">
-            <label className="absolute left-3  top-2 text-gray-400 text-xs ">
+            <label className="absolute left-3  top-2 text-gray-400 text-xs xs:hidden ">
               Sort by :
             </label>
             <select
