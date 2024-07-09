@@ -1,5 +1,8 @@
+import { ClassNames } from "@emotion/react";
+import { Style } from "@mui/icons-material";
 import React, { useState, useEffect } from "react";
 import { IoSearch } from "react-icons/io5";
+import { TbBackground } from "react-icons/tb";
 
 const CustomerList = () => {
   const [customers, setCustomers] = useState([]);
@@ -107,15 +110,17 @@ const CustomerList = () => {
     );
 
   return (
-    <div className=" relative bg-white     py-2 px-6 rounded-lg shadow-md w-11/12 max-h-[81.2rem] ">
+    <div className=" relative bg-white        py-2 px-6 rounded-lg shadow-md w-11/12     md:h-[550px]   lg:h-[550px]   ">
       <div className="flex justify-between">
         <div>
-          <h2 className="  font-bold mb-1 text-base">All Customers</h2>
-          <p className=" text-xs text-start text-green-300 mb-2">
+          <h2 className="  font-bold mb-1 text-base md:text-sm">
+            All Customers
+          </h2>
+          <p className=" text-xs text-start text-green-300 mb-2 md:">
             Active member
           </p>
         </div>
-        <div className="flex items-center justify-between gap-4  mb-2 ">
+        <div className="flex items-center justify-between gap-4  mb-2 mb:gap-2  ">
           <div className="relative">
             <input
               type="text"
@@ -132,7 +137,7 @@ const CustomerList = () => {
               Sort by :
             </label>
             <select
-              className=" bg-gray-50 block w-full py-2 px-3 border-0 text-end text-xs  border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+              className="    block w-full py-2 px-3 border-0 text-end text-xs bg-gray-50 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               value={sort}
               onChange={handleSortChange}
             >
@@ -161,7 +166,7 @@ const CustomerList = () => {
             </tr>
           </thead>
 
-          <tbody className="text-xs font-medium text-start p-o">
+          <tbody className="text-xs font-medium text-start p-o text-[8px]">
             {filteredCustomers.map((customer, index) => (
               <tr key={index}>
                 <td className="py-2 pl-0 pr-4  border-b">{customer.name}</td>
@@ -185,11 +190,11 @@ const CustomerList = () => {
           </tbody>
         </table>
       </div>
-      <div className="flex justify-between items-center mt-6 mb-2">
+      <div className="flex justify-between items-center mt-6  lg:mt-16 md:mt-16 ">
         <div className="text-sm   text-gray-400">
           Showing data 1 to 8 of 256K entries
         </div>
-        <div className="flex gap-x-2">
+        <div className="flex gap-x-2 ">
           <button className="bg-gray-50  text-[#404B52] text-[8px] h-6 w-6 border rounded-md focus:bg-[#5932EA] focus:text-white">
             {"<"}
           </button>
