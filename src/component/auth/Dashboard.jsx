@@ -234,15 +234,23 @@ const Dashboard = () => {
       >
         <div className="flex   flex-col gap-2    w-11/12   ">
           <div className="relative flex justify-between mt-2 mb-1  ">
-            {isOpen && (
-              <button
-                onClick={handleLogout}
-                className="border  00 font-bold text-xs text-white   bg-purple-600 rounded-lg py-1 px-2 absolute top-5 right-0 "
-              >
-                {" "}
-                Logout
-              </button>
-            )}
+            <div className="relative">
+              <FaChevronDown
+                onClick={togglePopup}
+                className={`ml-${
+                  isSidebarExpanded ? "20" : "2"
+                } text-xs text-gray-400  `}
+              />
+              {isOpen && (
+                <button
+                  onClick={handleLogout}
+                  className="border  00 font-bold text-xs text-white   bg-purple-600 rounded-lg py-1 px-2 absolute top-5 right-0 "
+                >
+                  {" "}
+                  Logout
+                </button>
+              )}
+            </div>
             <h1 className="text-base font-bold flex xs:text-sm xs:ml-12 ">
               {" "}
               Hello, Evano👋🏼,
