@@ -76,12 +76,12 @@ const Dashboard = () => {
         className={`  flex flex-col h-full 
           max-h-dvh pt-2 bg-white p-6 transition-all duration-300   ${
             isSidebarExpanded ? " 40" : " 16"
-          }   lg:max-w-48   md:z-40 md:max-w-48 xs:hidden 
+          }   lg:max-w-48   md:z-40 md:max-w-48 xs:z-40 xs:hidden  
            `}
       >
         <div className="mb-6 flex gap-2 cursor-pointer    ">
           <RiSettingsLine
-            className="h-8 w-8 text-2xl xs:h-6 xs:w-6 xs:mt-6   "
+            className="h-8 w-8 text-2xl xs:h-6   xs:w-6   "
             onClick={toggleSidebar}
           />
           {isSidebarExpanded && (
@@ -234,6 +234,10 @@ const Dashboard = () => {
       >
         <div className="flex   flex-col gap-2    w-11/12   ">
           <div className="relative flex justify-between mt-2 mb-1  ">
+            <RiSettingsLine
+              className="h-8 w-8 text-2xl xs:h-6   xs:w-6   "
+              onClick={toggleSidebar}
+            />
             <h1 className="text-base font-bold flex xs:text-sm xs:ml-12 ">
               {" "}
               Hello, Evano👋🏼,
